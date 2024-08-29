@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anindya's To-Do List</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-800 text-white">
+    <div class="container mx-auto p-4 max-w-xl">
+        <div class="bg-gray-700 shadow-lg rounded-lg overflow-hidden">
+            <header class="bg-gradient-to-r from-indigo-500 to-blue-400 p-6 flex items-center">
+                <div>
+                    <h2 class="text-white text-2xl font-semibold">Anindya</h2>
+                    <p class="text-gray-200 text-sm">Online</p>
+                </div>
+            </header>
+            <div class="p-4 h-96 overflow-y-auto" id="todoListContainer">
+                <ul id="todoList" class="space-y-6">
+                    <!-- Dynamic to-do items will appear here -->
+                </ul>
+            </div>
+            <div class="p-4 bg-gray-600 flex items-center">
+                <input type="text" id="todoInput" class="flex-1 bg-gray-700 text-white p-2 rounded-l-md focus:outline-none" placeholder="Enter your task...">
+                <button id="addTaskBtn" class="bg-blue-500 text-white px-4 py-2 rounded-r-md hover:bg-blue-600 transition">
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for Editing Task -->
+    <div id="editModal" class="fixed inset-0 hidden bg-gray-900 bg-opacity-80 flex justify-center items-center z-50">
+        <div class="bg-gray-700 p-6 rounded-lg shadow-lg w-96">
+            <h2 class="text-xl font-semibold mb-4 text-white">Edit Task</h2>
+            <input type="text" id="editInput" class="w-full bg-gray-600 text-white border rounded-md p-2 mb-4 focus:outline-none" placeholder="Update your task...">
+            <div class="flex justify-end">
+                <button id="updateTaskBtn" class="bg-green-500 text-white px-4 py-2 rounded-md hover:bg-green-600 mr-2">Update</button>
+                <button id="cancelEditBtn" class="bg-red-500 text-white px-4 py-2 rounded-md hover:bg-red-600">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="script.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+</html>

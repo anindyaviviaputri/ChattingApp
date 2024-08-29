@@ -1,0 +1,43 @@
+body {
+    background-color: #2d2d2d;
+}
+
+#todoList li {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    background-color: #3b3b3b;
+    padding: 15px;
+    border-radius: 20px;
+    transition: background-color 0.3s;
+}
+
+#todoList li:hover {
+    background-color: #4c4c4c;
+}
+
+#todoList li span {
+    flex: 1;
+    color: #e0e0e0;
+}
+
+#todoList li small {
+    color: #9b9b9b;
+    font-size: 0.75rem;
+}
+
+.bg-gradient-to-r {
+    background-image: linear-gradient(to right, #4c51bf, #5a67d8);
+}
+
+.text-gray-200 {
+    color: #bfbfbf;
+}
+
+.bg-gray-700 {
+    background-color: #3c3c3c;
+}
+
+.bg-gray-600 {
+    background-color: #525252;
+}
